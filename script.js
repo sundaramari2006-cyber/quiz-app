@@ -37,15 +37,15 @@ function submitQuiz(){
 
     let score=0;
     let q1=document.querySelector('input[name="q1"]:checked')
-    let q2=document.querySelector('input[name="q1"]:checked')
-    let q3=document.querySelector('input[name="q1"]:checked')
-    let q4=document.querySelector('input[name="q1"]:checked')
-    let q5=document.querySelector('input[name="q1"]:checked')
-    let q6=document.querySelector('input[name="q1"]:checked')
-    let q7=document.querySelector('input[name="q1"]:checked')
-    let q8=document.querySelector('input[name="q1"]:checked')
-    let q9=document.querySelector('input[name="q1"]:checked')
-    let q10=document.querySelector('input[name="q1"]:checked')
+    let q2=document.querySelector('input[name="q2"]:checked')
+    let q3=document.querySelector('input[name="q3"]:checked')
+    let q4=document.querySelector('input[name="q4"]:checked')
+    let q5=document.querySelector('input[name="q5"]:checked')
+    let q6=document.querySelector('input[name="q6"]:checked')
+    let q7=document.querySelector('input[name="q7"]:checked')
+    let q8=document.querySelector('input[name="q8"]:checked')
+    let q9=document.querySelector('input[name="q9"]:checked')
+    let q10=document.querySelector('input[name="q10"]:checked')
 
     if(q1) score+=Number(q1.value);
     if(q2) score+=Number(q2.value);
@@ -57,6 +57,7 @@ function submitQuiz(){
     if(q8) score+=Number(q8.value);
     if(q9) score+=Number(q9.value);
     if(q10) score+=Number(q10.value);
+    console.log(score);
 
     let userName=localStorage.getItem("currentUser");
 

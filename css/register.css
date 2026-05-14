@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#1d1b31,#3c2f5c,#5f4b8b);
+    overflow: hidden;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255,255, 255, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    animation: move 6s infinite alternate;
+}
+
+body::after{
+    content: '';
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    animation: move2 8s  infinite alternate;
+}
+
+@keyframes move {
+    from{
+        transform: translateY(0px);
+    }to{
+        transform: translateY(40px);
+    }
+}
+
+@keyframes move2 {
+    from{
+        transform: translateY(0px);
+    }to{
+        transform: translateY(-40px);
+    }
+}
+
+.regContainer{
+    width: 370px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    transition: 0.4s;
+}
+
+.regContainer:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.5);
+}
+
+.regContainer h1{
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.regContainer input{
+    width: 100%;
+    padding: 14px;
+    margin-top: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.regContainer input::placeholder{
+    color: #ddd;
+}
+
+/* Input Hover */
+.regContainer input:hover{
+    background: rgba(255,255,255,0.18);
+}
+
+/* Input Focus Animation */
+.regContainer input:focus{
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.22);
+    box-shadow: 0px 0px 10px #9b7bff;
+}
+/* Login Button */
+.regButton{
+    width: 100%;
+    padding: 14px;
+    margin-top: 28px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#7f5af0,#9b7bff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+/* Button Hover */
+.regButton:hover{
+    transform: scale(1.05);
+    background: linear-gradient(to right,#9b7bff,#7f5af0);
+    box-shadow: 0px 0px 15px #9b7bff;
+}
+
+/* Button Click */
+.regButton:active{
+    transform: scale(0.95);
+}
+
+/* Paragraph */
+.regContainer p{
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Link */
+.regContainer a{
+    color: #c5b3ff;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Link Hover */
+.regContainer a:hover{
+    color: white;
+    text-shadow: 0px 0px 8px white;
+}
