@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg,#1e1e2f,#3d2c5c,#6a5acd);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Circles */
+        body::before{
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            top: -80px;
+            left: -80px;
+            animation: float1 6s infinite alternate;
+        }
+
+        body::after{
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            bottom: -100px;
+            right: -100px;
+            animation: float2 8s infinite alternate;
+        }
+
+        @keyframes float1{
+            from{
+                transform: translateY(0px);
+            }
+            to{
+                transform: translateY(40px);
+            }
+        }
+
+        @keyframes float2{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(-40px);
+            }
+        }
+
+        /* Main Container */
+        .container{
+            width: 500px;
+            padding: 50px;
+            text-align: center;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+
+            animation: fadeIn 1s ease;
+            transition: 0.4s;
+
+            z-index: 1;
+        }
+
+        .container:hover{
+            transform: scale(1.03);
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        /* Heading */
+        h1{
+            color: white;
+            font-size: 50px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        p{
+            color: #ddd;
+            margin-bottom: 35px;
+            font-size: 18px;
+        }
+
+        /* Buttons */
+        .btn{
+            display: inline-block;
+            width: 180px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right,#7f5af0,#9b7bff);
+
+            transition: 0.4s;
+        }
+
+        .btn:hover{
+            transform: scale(1.08);
+            box-shadow: 0px 0px 15px #9b7bff;
+        }
+
+        .btn:active{
+            transform: scale(0.95);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Quiz App</h1>
+
+        <p>
+            Test your Web Development Knowledge
+        </p>
+
+        <a href="login.html" class="btn">
+            Login
+        </a>
+
+        <a href="register.html" class="btn">
+            Register
+        </a>
+
+    </div>
+
+</body>
+</html>
